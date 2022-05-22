@@ -1,10 +1,12 @@
 pipeline {
+    trigger {
+  pollSCM '* * * * *'      
+    }
    agent any
    tools{
  maven 'maven'  
    }
-    trigger {
-  pollSCM '* * * * *'
+  
 } 
 
     stages {
